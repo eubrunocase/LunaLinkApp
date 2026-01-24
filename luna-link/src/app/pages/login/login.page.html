@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>LunaLink Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div style="display: flex; flex-direction: column; gap: 20px; margin-top: 50px;">
+
+    <div style="text-align: center;">
+      <ion-icon name="person-circle-outline" style="font-size: 80px; color: var(--ion-color-primary);"></ion-icon>
+      <h2>Bem-vindo</h2>
+    </div>
+
+    <ion-item fill="outline">
+      <ion-label position="floating">Login / Email</ion-label>
+      <ion-input type="text" [(ngModel)]="loginData.login"></ion-input>
+    </ion-item>
+
+    <ion-item fill="outline">
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="loginData.password"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" (click)="fazerLogin()">
+      ENTRAR
+    </ion-button>
+
+  </div>
+</ion-content>
