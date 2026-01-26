@@ -1,30 +1,35 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>LunaLink Login</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding content-center">
+  
+  <div class="login-container">
 
-<ion-content class="ion-padding">
-  <div style="display: flex; flex-direction: column; gap: 20px; margin-top: 50px;">
-
-    <div style="text-align: center;">
-      <ion-icon name="person-circle-outline" style="font-size: 80px; color: var(--ion-color-primary);"></ion-icon>
-      <h2>Bem-vindo</h2>
+    <div class="header-section">
+      <div class="logo-circle">
+        <ion-icon name="business"></ion-icon>
+      </div>
+      <h1>LunaLink</h1>
+      <p>Gestão do condomínio Luna Village</p>
     </div>
 
-    <ion-item fill="outline">
-      <ion-label position="floating">Login / Email</ion-label>
-      <ion-input type="text" [(ngModel)]="loginData.login"></ion-input>
-    </ion-item>
+    <div class="form-section">
+      
+      <ion-item lines="full" class="custom-item">
+        <ion-icon name="person-outline" slot="start" color="primary"></ion-icon>
+        <ion-label position="stacked">Login ou Email</ion-label>
+        <ion-input type="text" [(ngModel)]="loginData.login"></ion-input>
+      </ion-item>
 
-    <ion-item fill="outline">
-      <ion-label position="floating">Senha</ion-label>
-      <ion-input type="password" [(ngModel)]="loginData.password"></ion-input>
-    </ion-item>
+      <ion-item lines="full" class="custom-item">
+        <ion-icon name="lock-closed-outline" slot="start" color="primary"></ion-icon>
+        <ion-label position="stacked">Senha</ion-label>
+        <ion-input type="password" [(ngModel)]="loginData.password"></ion-input>
+      </ion-item>
 
-    <ion-button expand="block" (click)="fazerLogin()">
-      ENTRAR
-    </ion-button>
+      <ion-button expand="block" size="large" class="submit-btn" (click)="fazerLogin()">
+        ENTRAR
+      </ion-button>
+
+    </div>
 
   </div>
+
 </ion-content>
