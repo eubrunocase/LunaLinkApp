@@ -1,0 +1,62 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" text="" color="dark"></ion-back-button>
+    </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding content-bg">
+
+  <div class="page-intro">
+    <h1>Onde será o evento?</h1>
+    <p>Escolha um dos espaços abaixo para verificar a disponibilidade.</p>
+  </div>
+
+  <div class="cards-container">
+    
+    <div class="custom-card ion-activatable ripple-parent" (click)="irParaCalendario(1, 'Salão de Festas')">
+      
+      <div class="card-icon-wrapper party-gradient">
+        <ion-icon name="wine-outline"></ion-icon>
+      </div>
+      
+      <div class="card-info">
+        <h3>Salão de Festas</h3>
+        <div class="capacity-badge">
+          <ion-icon name="people-outline"></ion-icon>
+          <span>Até 50 pessoas</span>
+        </div>
+      </div>
+
+      <div class="card-arrow">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </div>
+
+      <ion-ripple-effect></ion-ripple-effect>
+    </div>
+
+    <div class="custom-card ion-activatable ripple-parent" (click)="irParaCalendario(2, 'Churrasqueira')">
+      
+      <div class="card-icon-wrapper grill-gradient">
+        <ion-icon name="flame-outline"></ion-icon>
+      </div>
+      
+      <div class="card-info">
+        <h3>Churrasqueira</h3>
+        <div class="capacity-badge">
+          <ion-icon name="people-outline"></ion-icon>
+          <span>Até 15 pessoas</span>
+        </div>
+      </div>
+
+      <div class="card-arrow">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </div>
+
+      <ion-ripple-effect></ion-ripple-effect>
+    </div>
+
+  </div>
+
+</ion-content>

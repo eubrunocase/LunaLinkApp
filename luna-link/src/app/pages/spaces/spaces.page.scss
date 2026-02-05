@@ -1,0 +1,133 @@
+/* Fundo cinza bem clarinho para destacar os cartões brancos */
+.content-bg {
+  --background: #f8f9fa; 
+}
+
+ion-toolbar {
+  --background: #f8f9fa; /* Continuidade com o fundo */
+}
+
+.header-title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.page-intro {
+  margin-top: 55px;
+  margin-bottom: 30px;
+  padding: 0 5px;
+
+  h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 15px;
+    color: #888;
+    margin: 0;
+    line-height: 1.4;
+  }
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaço entre os cartões */
+}
+
+/* O Cartão em si */
+.custom-card {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  
+  /* Sombra suave e moderna */
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+
+  /* Efeito ao clicar/tocar */
+  &:active {
+    transform: scale(0.98);
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Container do Ícone (Bolinha colorida) */
+.card-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  ion-icon {
+    font-size: 28px;
+    color: white;
+  }
+}
+
+/* Gradientes Bonitos */
+.party-gradient {
+  background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+  box-shadow: 0 8px 16px -4px rgba(161, 140, 209, 0.4);
+}
+
+.grill-gradient {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+  /* Se preferir mais laranja: */
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  box-shadow: 0 8px 16px -4px rgba(253, 160, 133, 0.4);
+}
+
+/* Informações de Texto */
+.card-info {
+  flex-grow: 1; /* Ocupa o espaço disponível */
+
+  h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+  }
+}
+
+/* Badge de Capacidade (Pílula cinza) */
+.capacity-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f0f2f5;
+  padding: 6px 12px;
+  border-radius: 20px;
+  
+  span {
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+  }
+
+  ion-icon {
+    font-size: 14px;
+    color: #666;
+  }
+}
+
+/* Seta da direita */
+.card-arrow {
+  color: #ccc;
+  font-size: 24px;
+}
+
+.ripple-parent {
+  position: relative;
+  overflow: hidden; /* Garante que o efeito não saia das bordas arredondadas */
+}
